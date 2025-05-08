@@ -116,9 +116,9 @@ defmodule TypedStructEctoChangeset do
 
   defp build_in_aliases({:__aliases__, _, [:DateTime]}, opts) do
     if Keyword.get(opts, :usec_times, false) do
-      :datetime_usec
+      :utc_datetime_usec
     else
-      :datetime
+      :utc_datetime
     end
   end
 
